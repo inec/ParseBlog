@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400);
+font-family: 'Roboto Slab', serif;
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
+font-family: 'Tangerine', cursive;
+
+
+.xsbg {
+  background: url('assets/big_woodgrain.gif') no-repeat top center;
+
+
+
+}
+
+.bg {
+  background: url('assets/big_woodgrain.gif') no-repeat top;
+      background-repeat: repeat-x;
+  width: 100%;
+    max-width:100%;
+  height: 120px; /*same height as jumbotron */
+  top:0;
+  left:0;
+margin-bottom: 100px;
+
+}
+body
+{
+          font-family:'Open Sans';
+
+}
+.brcoloros
+{
+      font-family:'Open Sans';
+      color:#008f7e;
+    	
+}
+
+.brhr{
+    border-bottom:solid 1px;
+    border-color:#008f7e;
+        border-color:#00677e;
+}
+
+.brroboto{
+color:#006771;
+    color:#008f7e;
+font-family: Roboto Slab;
+font-size: 1.1em;
+    font-weight:300;
+/*font-family: Tangerine;*/
+}
+
+.brbold{
+font-weight: 600;
+}
+.brlineheight{
+line-height: 1.5;
+}
