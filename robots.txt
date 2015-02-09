@@ -1,0 +1,5 @@
+# robots.txt Disallow: /
+User-agent: *
+Disallow: /new.html
+Crawl-delay: 5
+Disallow: /cgi-bin/
