@@ -10,21 +10,28 @@ font-family: 'Tangerine', cursive;
 
 
 }
-
+.navbar{
+    border:none;
+}
 .bg {
-  background: url('assets/big_woodgrain.gif') no-repeat top;
-      background-repeat: repeat-x;
-  width: 100%;
-    max-width:100%;
-  height: 120px; /*same height as jumbotron */
+  background: url('assets/big_woodgrain.gif') ;
+
+    background-size: 100% 16.5vmin; 
+    background-repeat: no-repeat; 
+    /*background-size:    cover;15vmin 12vh*/
+
+
+   /*height: 120px;same height as jumbotron */
   top:0;
   left:0;
-margin-bottom: 100px;
+    right:0;
+margin-bottom: 5vmax;
 
 }
 body
 {
-          font-family:'Open Sans';
+    font-family:'Open Sans';
+ 	overflow-x: hidden;
 
 }
 .brcoloros
@@ -44,8 +51,8 @@ body
 color:#006771;
     color:#008f7e;
 font-family: Roboto Slab;
-font-size: 1.1em;
-    font-weight:300;
+
+    font-weight:500;
 /*font-family: Tangerine;*/
 }
 
@@ -54,4 +61,45 @@ font-weight: 600;
 }
 .brlineheight{
 line-height: 1.5;
+}
+/*
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+
+}*/
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+overflow-x: hidden;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+/*margin: 0 auto -3em;*/
+    margin-bottom:-3em;
+
+}
+.footer, .push {
+height: 3em;
+}
+
+h2
+{
+        font-size: 4.3vh;
+    
+}
+h3
+{
+        font-size: 3.5vh;
+}
+h4
+{
+        font-size: 3.3vh;
 }
