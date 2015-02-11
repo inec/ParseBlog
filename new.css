@@ -16,7 +16,7 @@ font-family: 'Tangerine', cursive;
 .bg {
   background: url('assets/big_woodgrain.gif') ;
 
-    background-size: 100% 16.5vmin; 
+    background-size: 100% 15.5vmin; 
     background-repeat: no-repeat; 
     /*background-size:    cover;15vmin 12vh*/
 
@@ -25,19 +25,22 @@ font-family: 'Tangerine', cursive;
   top:0;
   left:0;
     right:0;
-margin-bottom: 5vmax;
+    margin-bottom:1.5em;
+
 
 }
 body
 {
     font-family:'Open Sans';
  	overflow-x: hidden;
+    min-height: 500px;
 
 }
 .brcoloros
 {
       font-family:'Open Sans';
       color:#008f7e;
+    font-weight:200;
     	
 }
 
@@ -51,8 +54,9 @@ body
 color:#006771;
     color:#008f7e;
 font-family: Roboto Slab;
-
+margin-top;0;
     font-weight:500;
+       font-size: 2.7vh;
 /*font-family: Tangerine;*/
 }
 
@@ -60,7 +64,9 @@ font-family: Roboto Slab;
 font-weight: 600;
 }
 .brlineheight{
-line-height: 1.5;
+line-height: 1.4;
+         margin-top: 0;
+    /*margin-top:0.1em;*/
 }
 /*
 .footer {
@@ -77,29 +83,58 @@ margin: 0;
 html, body {
 height: 100%;
 overflow-x: hidden;
+  
 }
 .wrapper {
-min-height: 100%;
+min-height: 90%;
 height: auto !important;
-height: 100%;
-/*margin: 0 auto -3em;*/
-    margin-bottom:-3em;
+/*height: 100%;*/
+margin: 0 auto -0.01em;
+   // margin-bottom:-0.1em;
 
 }
 .footer, .push {
-height: 3em;
+height: 0.1em;
 }
 
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 160px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top:-160px; /* negative value of footer height */
+	height: 160px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+h1
+{
+    font-size: 8vh;
+    font-weight: 300;
+
+}
 h2
 {
-        font-size: 4.3vh;
+        font-size: 3.3vh;
     
 }
 h3
 {
-        font-size: 3.5vh;
+        font-size: 2.7vh;
 }
 h4
 {
-        font-size: 3.3vh;
+        font-size: 2.0vh;
+}
+.brcontact
+{
+    font-size:1.9vh;
 }
