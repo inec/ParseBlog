@@ -17,3 +17,5 @@ Test2(https://secure.happysavings.ca/#social)
 1. From a console éterminal
 2. Run `npm install`
 3. Run `bower install'
+
+Test2(http://www.brioinsurance.ca/#social)
