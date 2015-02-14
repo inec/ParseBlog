@@ -6,6 +6,8 @@ jQuery(function($)
         var email = $("#email").val(); // get email field value
         var name = $("#name").val(); // get name field value
         var msg = $("#msg").val(); // get message field value
+console.log(email);
+/*
         $.ajax(
         {
             type: "POST",
@@ -38,6 +40,7 @@ jQuery(function($)
         .fail(function(response) {
             alert('Error sending message.');
         });
+        */
         return false; // prevent page refresh
     });
 });
