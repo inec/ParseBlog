@@ -1,11 +1,11 @@
 jQuery(function($)  
 {
-    console.log("3");
+    console.log("7");
     $("#contact_form").submit(function()
     {
         var email = $("#email").val(); // get email field value
         var name = $("#fname").val()+' ' +$("#lname").val(); // get name field value
-        var msg = $("#msg").val(); // get message field value
+        var msg = $("#message").val(); // get message field value
 console.log(email+name+msg);
 /*
         $.ajax(
