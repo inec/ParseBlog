@@ -7,7 +7,7 @@ jQuery(function($)
         var name = $("#fname").val()+' ' +$("#lname").val(); // get name field value
         var msg = $("#message").val(); // get message field value
 console.log(email+name+msg);
-/*
+
         $.ajax(
         {
             type: "POST",
@@ -40,7 +40,7 @@ console.log(email+name+msg);
         .fail(function(response) {
             alert('Error sending message.');
         });
-        */
+        
         return false; // prevent page refresh
     });
 });
