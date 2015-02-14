@@ -24,7 +24,7 @@ console.log(email+name+msg);
                     'text': msg,
                     'to': [
                     {
-                        'email': 'luyege+mandrill@gmail.com',
+                        'email': 'luyege+pub@gmail.com',
                         'name': 'YChi Lu',
                         'type': 'to'
                     }]
