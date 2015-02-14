@@ -4,9 +4,9 @@ jQuery(function($)
     $("#contact_form").submit(function()
     {
         var email = $("#email").val(); // get email field value
-        var name = $("#fname").val(); // get name field value
+        var name = $("#fname").val()+' ' +$("#lname").; // get name field value
         var msg = $("#msg").val(); // get message field value
-console.log(email);
+console.log(email+name+msg);
 /*
         $.ajax(
         {
