@@ -1,6 +1,6 @@
 jQuery(function($)  
 {
-    console.log("t");
+    console.log("to");
     $("#contact_form").submit(function()
     {
         var email = $("#email").val(); // get email field value
