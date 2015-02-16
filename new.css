@@ -2,8 +2,21 @@
 font-family: 'Roboto Slab', serif;
 @import url(http://fonts.googleapis.com/css?family=Tangerine);
 font-family: 'Tangerine', cursive;
+a {
+    color: #000000;
+    text-decoration: none;
+}
 
-
+a:hover 
+{
+     color:#000000; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+span.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
 .xsbg {
   background: url('assets/big_woodgrain.gif') no-repeat top center;
 
