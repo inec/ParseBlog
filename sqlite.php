@@ -4,17 +4,17 @@ class medoo
 	protected $database_type = 'sqlite';
  
 	// For SQLite [optional]
-	protected $database_file = 'c:\xampp\database.db';
+	//protected $database_file = 'c:\xampp\database.db';
  
 // And get started!
 require_once 'medoo.min.php';
  
-$database = new medoo('c:\xampp\database.db');
+$database = new medoo('database.db');
  
 // Or via independent configuration
-$database = new medoo([
+$database = new medoo([  
 	'database_type' => 'sqlite',
-	'database_file' => 'c:\xampp\database.db'
+	'database_file' => 'database.db'
 ]);
  
 $database->insert("account", [
