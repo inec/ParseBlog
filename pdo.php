@@ -47,14 +47,14 @@
  
     // Array with some test data to insert to database             
     $messages = array(
-                  array('title' => 'Hello!',
-                        'message' => 'Just testing...',
-                        'time' => 1327301464),
-                  array('title' => 'Hello again!',
-                        'message' => 'More testing...',
-                        'time' => 1339428612),
                   array('title' => 'Hi!',
-                        'message' => 'SQLite3 is cool...',
+                        'message' => 'Just testing...',
+                        'time' => 1327301400),
+                  array('title' => 'Hi again!',
+                        'message' => 'More testi...',
+                        'time' => 1339428612),
+                  array('title' => 'Hi SQL3!',
+                        'message' => 'SQLite3  cool...',
                         'time' => 1327214268)
                 );
  
