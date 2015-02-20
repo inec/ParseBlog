@@ -121,10 +121,10 @@
     $result = $memory_db->query('SELECT * FROM messages');
  
     foreach($result as $row) {
-      echo "Id: " . $row['id'] . "</br>\n";
-      echo "Title: " . $row['title'] . "</br>\n";
-      echo "Message: " . $row['message'] . "</br>\n";
-      echo "Time: " . $row['time'] . "</br>\n";
+      echo "id: " . $row['id'] . "</br>\n";
+      echo "title: " . $row['title'] . "</br>\n";
+      echo "message: " . $row['message'] . "</br>\n";
+      echo "time is: " . $row['time'] . "</br>\n";
       echo "\n";
     }
  
