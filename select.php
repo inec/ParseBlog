@@ -16,7 +16,7 @@
    $sql =<<<EOF
       UPDATE COMPANY set SALARY = random() where ID=1;
 EOF;
-$sql='UPDATE COMPANY set SALARY = 2 where ID=2';
+$sql='UPDATE COMPANY set SALARY = 2 where ID=3';
 echo $sql;
    $ret = $db->exec($sql);
    if(!$ret){
@@ -31,7 +31,7 @@ EOF;
    $ret = $db->query($sql);
    while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
       echo '</Br>';
-      echo "ID = ". $row['ID'] . "\n";
+      echo "iD = ". $row['ID'] . "\n";
       echo "</br>";
       echo "NAME = ". $row['NAME'] ."\n";
       echo '</br>';
@@ -39,6 +39,6 @@ EOF;
       echo "</br>";
       echo "SALARY =  ".$row['SALARY'] ."\n\n";
    }
-   echo "</br>Operation done successfully\n";
+   echo "</br></br><hr>Operation done successfully\n";
    $db->close();
 ?>
