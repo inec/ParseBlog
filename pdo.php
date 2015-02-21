@@ -122,11 +122,11 @@
  
  /*
  foreach ($dbh->query($query) as $row) {
-	echo json_encode($row['title']);
+	echo json_encode($row);
 }*/
 
     foreach($result as $row) {
-	echo json_encode($row['message']);
+	echo json_encode($row);
       //echo "id: " . $row['id'] . "</br>\n";
       //echo "title: " . $row['title'] . "</br>\n";
       //echo "message: " . $row['message'] . "</br>\n";
