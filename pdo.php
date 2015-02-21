@@ -120,8 +120,9 @@
     // Select all data from memory db messages table 
     $result = $memory_db->query('SELECT * FROM messages');
  	$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
-
-echo json_encode($arr);
+ $someArray = [];
+	
+//echo json_encode($arr);
  /*
  foreach ($dbh->query($query) as $row) {
 	echo json_encode($row);
@@ -129,7 +130,13 @@ echo json_encode($arr);
 }*/
 //echo json_encode((array)$result);
     foreach($result as $row) {
-	echo json_encode($row);
+	//echo json_encode($row);
+	
+	array_push($someArray,[
+		"id" => $row['id'],
+	"title" => $row['title'],
+	"message: " => $row['message']
+	]);
       //echo "id: " . $row['id'] . "</br>\n";
       //echo "title: " . $row['title'] . "</br>\n";
       //echo "message: " . $row['message'] . "</br>\n";
@@ -137,7 +144,7 @@ echo json_encode($arr);
       //echo "\n";
     }
  
- 
+ echo json_encode($someArray);
     /**************************************
     * Drop tables                         *
     **************************************/
