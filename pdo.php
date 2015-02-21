@@ -120,12 +120,18 @@
     // Select all data from memory db messages table 
     $result = $memory_db->query('SELECT * FROM messages');
  
+ /*
+ foreach ($dbh->query($query) as $row) {
+	echo json_encode($row[0]);
+}*/
+
     foreach($result as $row) {
-      echo "id: " . $row['id'] . "</br>\n";
-      echo "title: " . $row['title'] . "</br>\n";
-      echo "message: " . $row['message'] . "</br>\n";
-      echo "time is: " . $row['time'] . "</br>\n";
-      echo "\n";
+	echo json_encode($row[0]);
+      //echo "id: " . $row['id'] . "</br>\n";
+      //echo "title: " . $row['title'] . "</br>\n";
+      //echo "message: " . $row['message'] . "</br>\n";
+      //echo "time is: " . $row['time'] . "</br>\n";
+      //echo "\n";
     }
  
  
