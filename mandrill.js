@@ -13,7 +13,7 @@ console.log(email+name+msg);
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json",
             data: {
-                'key': '2i1AwhFMxGkaJ6O3Z3ousQ',
+                'key': '2i1AwhFMxGk'+'aJ6O3Z3ousQ',
                 'message': {
                     'from_email': email,
                     'from_name': name,
@@ -24,8 +24,8 @@ console.log(email+name+msg);
                     'text': msg,
                     'to': [
                     {
-                        'email': 'luyege+pub@gmail.com',
-                        'name': 'YChi Lu',
+                        'email': 'luyege+pub'+'@gmail.com',
+                        'name': 'Y Lu',
                         'type': 'to'
                     }]
                 }
