@@ -1,19 +1,19 @@
 {
-    "key": "xxxxxxxxxxxxxxxxxx",
+    "key": "",
     "message": {
-        "html": "<p>PowerShell ????????(HTML)01</p>",
-        "text": "PowerShell ????????(TEXT)01",
-        "subject": "PowerShell ????01",
+        "html": "<p>PowerShell Sample TextHTML01</p><code ><code class='plain'>Invoke-RestMethod -Uri <a href='https://mandrillapp.com/api/1.0/messages/send.json'>https://mandrillapp.com/api/1.0/messages/send.json -InFile mail.json -Method POST </code> </code>",
+        "text": "PowerShell Mandrill Sample Text(TEXT)01",
+        "subject": "PowerShell Mandrill sample01",
         "from_email": "luyege+pubfrom@gmail.com",
-        "from_name": "Example Name",
+        "from_name": "From",
         "to": [
             {
-                "email": "luyege+pub@gmail.com",
-                "name": "Recipient Name"
+                "email": "luyege+pubfp@gmail.com",
+                "name": "Hell Receive"
             }
         ],
         "headers": {
-            "Reply-To": "hoge1@hogehoge.local"
+            "Reply-To": "yl+df@happysaving.ca"
         }
     }
 }
