@@ -1,0 +1,19 @@
+{
+    "key": "xxxxxxxxxxxxxxxxxx",
+    "message": {
+        "html": "<p>PowerShell ????????(HTML)01</p>",
+        "text": "PowerShell ????????(TEXT)01",
+        "subject": "PowerShell ????01",
+        "from_email": "luyege+pubfrom@gmail.com",
+        "from_name": "Example Name",
+        "to": [
+            {
+                "email": "luyege+pub@gmail.com",
+                "name": "Recipient Name"
+            }
+        ],
+        "headers": {
+            "Reply-To": "hoge1@hogehoge.local"
+        }
+    }
+}
