@@ -7,6 +7,7 @@
 <body>
 
 <main>
+sql
     <?=$this->section('content')?>
 </main>
 
