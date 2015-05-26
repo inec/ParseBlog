@@ -150,12 +150,12 @@ if( $authentication_required ){
 if( strcasecmp($_POST['method'],'hello') == 0){
     $response['code'] = 1;
     $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
-    $response['data'] = 'Hello World';
+    $response['data'] = 'Hello World-'.$_POST['method'];
 }
  
 // --- Step 4: Response
  
-// Return Response to browser
+// Return Response 2 browser
 deliver_response($_GET['format'], $response);
  
 ?>
