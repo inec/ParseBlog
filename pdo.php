@@ -113,7 +113,7 @@
     // Update old title to new title
     $update = "UPDATE messages SET title = {$new_title} 
                 WHERE datetime(time) > 
-                datetime('2012-06-01 15:48:07')";
+                datetime('2015-06-01 15:48:07')";
     // Execute update
     $memory_db->exec($update);
  
@@ -166,6 +166,6 @@
   }
   catch(PDOException $e) {
     // Print PDOException message
-    echo $e->getMessage();
+    echo $e->getMessage()
   }
 ?>
