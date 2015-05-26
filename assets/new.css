@@ -1,0 +1,135 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400);
+font-family: 'Roboto Slab', serif;
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
+font-family: 'Tangerine', cursive;
+
+
+.xsbg {
+  background: url('assets/big_woodgrain.gif') no-repeat top center;
+
+
+
+}
+.navbar{
+    border:none;
+}
+.bg {
+  background: url('assets/big_woodgrain.gif') ;
+
+    background-size: 100% 63%; 
+    background-repeat: no-repeat; 
+    /*   background-size: 100% 15.5vmin; background-size:    cover;15vmin 12vh*/
+
+
+   /*height: 120px;same height as jumbotron */
+  top:0;
+  left:0;
+    right:0;
+    margin-bottom:1.5em;
+
+
+}
+body
+{
+    font-family:'Open Sans';
+ 	overflow-x: hidden;
+
+}
+.brcoloros
+{
+      font-family:'Open Sans';
+      color:#008f7e;
+    font-weight:200;
+    	
+}
+
+.brhr{
+    border-bottom:solid 1px;
+    border-color:#008f7e;
+        border-color:#00677e;
+}
+
+.brroboto{
+color:#006771;
+    color:#008f7e;
+font-family: Roboto Slab;
+margin-top;0;
+    font-weight:500;
+       font-size: 2.7vh;
+/*font-family: Tangerine;*/
+}
+
+.brbold{
+font-weight: 600;
+}
+.brlineheight{
+line-height: 1.7;
+       margin-top:0.5em;  
+    /*margin-top:0.1em;margin-top: 0;*/
+}
+.mobileheight{
+line-height: 1.5;
+       margin-top:0.05em;  
+    /*margin-top:0.1em;margin-top: 0;*/
+}
+/*
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+
+}*/
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+overflow-x: hidden;
+  
+}
+
+
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 160px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top:-160px; /* negative value of footer height */
+	height: 160px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+h1
+{
+    font-size: 8vh;
+    font-weight: 300;
+
+}
+h2
+{
+        font-size: 3.1vh;
+    
+}
+h3
+{
+        font-size: 2.6vh;
+}
+h4
+{
+        font-size: 2.0vh;
+}
+.brcontact
+{
+    font-size:1.9vh;
+}
