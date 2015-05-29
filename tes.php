@@ -7,7 +7,7 @@
     Input:
  
         $_GET['format'] = [ json | html | xml ]
-        $_GET['method'] = []
+        $_post['method'] = []
  
 credit : I forgot
  
