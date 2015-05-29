@@ -9,22 +9,16 @@
         $_GET['format'] = [ json | html | xml ]
         $_GET['method'] = []
  
-    Output: A formatted HTTP response
- 
-    Author: 
- 
-    History:
-        11/13/2015 - Created
+credit : I forgot
  
 */
  
 // --- Step 1: Initialize variables and functions
- 
 /**
  * Deliver HTTP Response
  * @param string $format The desired HTTP response content type: [json, html, xml]
  * @param string $api_response The desired HTTP response data
-
+ * @return void
  **/
 function deliver_response($format, $api_response){
  
@@ -87,6 +81,7 @@ $HTTPS_required = FALSE;
  
 // Define whether user authentication is required
 $authentication_required = FALSE;
+$authentication_required = True;
  
 // Define API response codes and their related HTTP response
 $api_response_code = array(
@@ -124,14 +119,13 @@ if( $authentication_required ){
         $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
         $response['data'] = $api_response_code[ $response['code'] ]['Message'];
  
-        // Return Response to browser
+        // Return Response to browser //401
         deliver_response($_GET['format'], $response);
  
     }
  
     // Return an error response if user fails authentication. This is a very simplistic example
     // that should be modified for security in a production environment
-//modify logic
     elseif( $_POST['username'] != 'foo' || $_POST['password'] != 'bar' ){
         $response['code'] = 4;
         $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
@@ -144,18 +138,18 @@ if( $authentication_required ){
  
 }
  
-// --- Step 3: handle Request
+// --- Step 3: Process Request
  
 // Method A: Say Hello to the API
 if( strcasecmp($_POST['method'],'hello') == 0){
     $response['code'] = 1;
     $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
-    $response['data'] = 'Hello World-'.$_POST['method'];
+    $response['data'] = 'ello World-'.$_POST['method'].'-'.$_POST['username'];
 }
  
-// --- Step 4: Response
+// --- Step 4: Deliver Response
  
-// Return Response 2 browser
+// Return Response to browser
 deliver_response($_GET['format'], $response);
  
 ?>
