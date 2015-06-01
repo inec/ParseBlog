@@ -14,7 +14,7 @@ Test2(https://secure.happysavings.ca/#social)
 * Bowern
 
 
-1. From a console �terminal
+1. From a console terminal
 2. Run `npm install`
 3. Run `bower install'
 Brio Insurance Steinbach Manitoba(http://www.brioinsurance.ca/#socialgh-pages)
