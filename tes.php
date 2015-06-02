@@ -8,14 +8,14 @@
         $_GET['format'] = [ json | html | xml ]
         $_post['method'] = []
  
-<<<<<<< HEAD
+
     Output: A formatted HTTP response
  token=df&team_id=T&team_domain=rrcb&service_id=5025001591&channel_id=C04V6GS9L&channel_name=workon&timestamp=1432874385.000002&user_id=U043VGA9A&user_name=lphp&text=weather+wet&trigger_word=weather
  
 
 =======
 credit : I forgot
->>>>>>> aa86afc9521e9342fecab5aaf0bee48ad9beec89
+
  
 */
 
@@ -160,6 +160,8 @@ if( strcasecmp($_GET['method'],'hello') == 0){
 $sha2=base64_encode($sha);
 
 $response['sha246'] = $sha2;
+$iscurl=function_exists('curl_version');
+$response['is_curl']=$iscurl;
 }
  
 // --- Step 4: Deliver Response
