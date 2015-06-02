@@ -1,25 +1,24 @@
 <?php
 /*
-    API Demo
+    API Sample
  
-    This script provides a RESTful API interface for a web application
- 
+
     Input:
  
         $_GET['format'] = [ json | html | xml ]
-        $_GET['method'] = []
+        $_post['method'] = []
  
     Output: A formatted HTTP response
+ token=df&team_id=T&team_domain=rrcb&service_id=5025001591&channel_id=C04V6GS9L&channel_name=workon&timestamp=1432874385.000002&user_id=U043VGA9A&user_name=lphp&text=weather+wet&trigger_word=weather
  
-    Author: 
- 
-    History:
-        11/13/2015 - Created
+
  
 */
- 
+$sha= hash("Sha256",     "The quick brown fox jumped over the lazy dog.",true);
+$sha2=base64_encode($sha);
+echo $sha2;
 // --- Step 1: Initialize variables and functions
- 
+ //aLEoK5HeLAVMNmKcuN1EfxLwltPjxYeXjcIkhERjNIM=
 /**
  * Deliver HTTP Response
  * @param string $format The desired HTTP response content type: [json, html, xml]
@@ -147,10 +146,10 @@ if( $authentication_required ){
 // --- Step 3: handle Request
  
 // Method A: Say Hello to the API
-if( strcasecmp($_POST['method'],'hello') == 0){
+if( strcasecmp($_GET['method'],'hello') == 0){
     $response['code'] = 1;
     $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
-    $response['data'] = 'Hello World-'.$_POST['method'];
+    $response['data'] = 'Hello World-'.$_GET['method'];
 }
  
 // --- Step 4: Response
