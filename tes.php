@@ -18,14 +18,11 @@ credit : I forgot
 >>>>>>> aa86afc9521e9342fecab5aaf0bee48ad9beec89
  
 */
-$sha= hash("Sha256",     "The quick brown fox jumped over the lazy dog.",true);
-$sha2=base64_encode($sha);
-echo $sha2;
+
 // --- Step 1: Initialize variables and functions
-<<<<<<< HEAD
+
  //aLEoK5HeLAVMNmKcuN1EfxLwltPjxYeXjcIkhERjNIM=
-=======
->>>>>>> aa86afc9521e9342fecab5aaf0bee48ad9beec89
+// aa86afc9521e9342fecab5aaf0bee48ad9beec89
 /**
  * Deliver HTTP Response
  * @param string $format The desired HTTP response content type: [json, html, xml]
@@ -93,7 +90,7 @@ $HTTPS_required = FALSE;
  
 // Define whether user authentication is required
 $authentication_required = FALSE;
-$authentication_required = True;
+$authentication_required = FALSE;
  
 // Define API response codes and their related HTTP response
 $api_response_code = array(
@@ -156,11 +153,13 @@ if( $authentication_required ){
 if( strcasecmp($_GET['method'],'hello') == 0){
     $response['code'] = 1;
     $response['status'] = $api_response_code[ $response['code'] ]['HTTP Response'];
-<<<<<<< HEAD
-    $response['data'] = 'Hello World-'.$_GET['method'];
-=======
-    $response['data'] = 'ello World-'.$_POST['method'].'-'.$_POST['username'];
->>>>>>> aa86afc9521e9342fecab5aaf0bee48ad9beec89
+
+    $response['data'] = 'ello World-'.$_GET['method'].'-';
+
+    $sha= hash("Sha256",     "The quick brown fox jumped over the lazy dog.",true);
+$sha2=base64_encode($sha);
+
+$response['sha246'] = $sha2;
 }
  
 // --- Step 4: Deliver Response
