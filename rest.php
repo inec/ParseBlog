@@ -51,6 +51,7 @@ function test_input($data) {
 $uri="http://localhost/ghpblog/ParseBlog/tes.php?method=hello&format=json";
 //$uri = "https://www.googleapis.com/freebase/v1/mqlread?query=%7B%22type%22:%22/music/artist%22%2C%22name%22:%22The%20Dead%20Weather%22%2C%22album%22:%5B%5D%7D";
 $response = \Httpful\Request::get($uri)->send();
+//$response->useProxy('127.0.0.1','3128');
 //$temp=$response->body->result->album;
 
 echo $response->body->sha246.' sinc The Dead Weather '.count($response->body->result->album) . " albums.\n";
@@ -75,6 +76,25 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+/* stack overlfow
+$url = 'https://mandrillapp.com/api/1.0/messages/send.json';
+$data = array( 
+  'key' => '{removedAPIkey}',
+  'message' => array (
+    'to'    =>  array( array( "email" => $_to ) ),
+    'from_name'   =>  Auth::user()->name,
+    'from_email'  =>  Auth::user()->email,
+    'subject' =>  $_subject,
+    'html'    =>  $_body
+    ),
+  'async' => true
+        );
+
+$request = Httpful::post($url)->sendsJson()->body($data)->send();
+
+if ( $request->body[0]->status == "queued" ) {
+    $success = true;
+}*/
 ?>
 
 </body>
