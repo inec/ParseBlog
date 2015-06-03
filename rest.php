@@ -1,22 +1,84 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+</head>
+<body> 
+
 <?php
-	include('./httpful.phar');
-	//
-if(!isset($_SESSION)) 
+	if(!isset($_SESSION)) 
     { 
         session_start(); 
     } 
+// define variables and set to empty values
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   $name = test_input($_POST["name"]);
+   $email = test_input($_POST["email"]);
+   $website = test_input($_POST["website"]);
+   $comment = test_input($_POST["comment"]);
+   $gender = test_input($_POST["gender"]);
+}
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+   Name: <input type="text" name="name">
+   <br><br>
+   E-mail: <input type="text" name="email">
+   <br><br>
+   Website: <input type="text" name="website" value=<?php echo   $website.$uri ?>>
+   <br><br>
+   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+   <br><br>
+   Gender:
+   <input type="radio" name="gender" value="female">Female
+   <input type="radio" name="gender" value="male">Male
+   <br><br>
+   <input type="submit" name="submit" value="Submit"> 
+</form>
+<?php
+	include('./httpful.phar');
+	//
+
 $uri="http://localhost/ghpblog/ParseBlog/tes.php?method=hello&format=json";
-$uri = "https://www.googleapis.com/freebase/v1/mqlread?query=%7B%22type%22:%22/music/artist%22%2C%22name%22:%22The%20Dead%20Weather%22%2C%22album%22:%5B%5D%7D";
+//$uri = "https://www.googleapis.com/freebase/v1/mqlread?query=%7B%22type%22:%22/music/artist%22%2C%22name%22:%22The%20Dead%20Weather%22%2C%22album%22:%5B%5D%7D";
 $response = \Httpful\Request::get($uri)->send();
 //$temp=$response->body->result->album;
 
-echo 'inc The Dead Weather '.count($response->body->result->album) . " albums.\n";
+echo $response->body->sha246.' sinc The Dead Weather '.count($response->body->result->album) . " albums.\n";
  $_SESSION['size']='small';
 Print_r ($_SESSION['size']);
 echo "</br>";
-echo "\n 23user path home aggin";
+echo "\n user path home aggin";
 echo $_SESSION['size']."\n123";
 echo "<hr/>session id </br>". session_id()."<hr/>";
+echo $response."<hr/>".$website;
 //echo $temp[1]."=",	$temp[12];
 //echo $response->body->sha246.'inc The Dead Weather has '.$response->status ;//. count($response->body->data) . " albums.\n";
 	?>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
+
+</body>
+</html>
+
+	
+	
