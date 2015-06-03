@@ -9,7 +9,7 @@ $response = \Httpful\Request::get($uri)->send();
  $_SESSION['size']='small';
 Print_r ($_SESSION['size']);
 echo "</br>";
-echo "\n123";
+echo "\n 23";
 echo $_SESSION['size']."\n123";
 //echo $response->body->sha246.'inc The Dead Weather has '.$response->status ;//. count($response->body->data) . " albums.\n";
 	?>
