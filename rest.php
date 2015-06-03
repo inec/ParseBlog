@@ -54,6 +54,21 @@ $response = \Httpful\Request::get($uri)->send();
 //$response->useProxy('127.0.0.1','3128');
 //$temp=$response->body->result->album;
 
+$postdata = array( 
+  'key' => '{removedAPIkey}',
+  'message' => array (
+    'to'    =>  array( array( "email" => $_to ) ),
+    'from_name'   =>  Auth::user()->name,
+    'from_email'  =>  Auth::user()->email,
+    'subject' =>  $_subject,
+    'html'    =>  $_body
+    ),
+  'async' => true
+        );
+
+
+
+
 echo $response->body->sha246.' sinc The Dead Weather '.count($response->body->result->album) . " albums.\n";
  $_SESSION['size']='small';
 Print_r ($_SESSION['size']);
@@ -89,7 +104,9 @@ $data = array(
     ),
   'async' => true
         );
-
+		
+		echo json_encode($data);
+{"key":"{removedAPIkey}","message":{"to":[{"email":null}],"from_name":"ad","from_email":"email","subject":null,"html":null},"async":true}
 $request = Httpful::post($url)->sendsJson()->body($data)->send();
 
 if ( $request->body[0]->status == "queued" ) {
