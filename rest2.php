@@ -65,7 +65,7 @@ echo $jsonString;
 $jObj=json_decode($jsonString);
 $logIn=$jObj->_loginInfo;
 $logIn->id=700;
-echo "<hr/>".$logIn->hash."<br/>".$logIn->id."<br/>";
+echo "<hr/>".$logIn->hash."<br/>".$logIn->id."<br/>w";
 $postdata = array( 
   'key' => '{removedAPIkey}',
   'message' => array (
