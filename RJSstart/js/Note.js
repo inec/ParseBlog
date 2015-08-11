@@ -6,9 +6,8 @@ var Note = React.createClass({
         this.setState({editing: true});
     },
     save: function() {
-    	console.log("save");
-    	var val=this.refs.newText.getDOMNode().value;
-    	alert("ToSave"+val);
+        var val = this.refs.newText.getDOMNode().value;
+        alert("TODO: Save note value" + val);
         this.setState({editing: false});
     },
     remove: function() {
@@ -30,7 +29,7 @@ var Note = React.createClass({
     renderForm: function() {
         return (
             <div className="note">
-            <textarea  ref="newText" defaultValue={this.props.children} 
+            <textarea ref="newText" defaultValue={this.props.children} 
             className="form-control"></textarea>
             <button onClick={this.save} className="btn btn-success btn-sm glyphicon glyphicon-floppy-disk" />
             </div>
@@ -46,5 +45,46 @@ var Note = React.createClass({
     }
 });
 
-React.render(<Note>Hello World</Note>, 
+var Board = React.createClass({
+    propTypes: {
+        count: function(props, propName) {
+            if (typeof props[propName] !== "number"){
+                return new Error('The count property must be a number');
+            }
+            if (props[propName] > 100) {
+                return new Error("Creating " + props[propName] + " notes is ridiculous");
+            }
+        }
+    },
+    getInitialState:function(){
+    	return{
+    		notes:[
+    		'callbill',
+    		'liste',
+    		'sdf'
+    		]
+    	}
+    },
+    render: function() {
+        return (<div className="board">{this.state.notes.map(function(note,i){
+        	return(
+        		<Note key={i}>{note}</Note>
+        		);
+        })}
+        	</div>)
+    }
+});
+
+
+React.render(<Board count={10}/>, 
     document.getElementById('react-container'));
+
+
+
+
+
+
+
+
+
+
