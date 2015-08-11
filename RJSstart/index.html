@@ -10,10 +10,16 @@
     <script type="text/jsx">
 var MyComponent=React.createClass({
 	render:function(){
-		return <div>My JSX React componet</div>;
+		return <div>My JSX React componet
+		<h3>{this.props.text}</h3>
+		<p>{this.props.children}</p>
+		</div>;
 	}
 });
-React.render(<div><MyComponent /><MyComponent /><MyComponent /></div>
+React.render(<div><MyComponent text="1">This heloo</MyComponent>
+	<MyComponent text="2">two</MyComponent>
+	<MyComponent text="3">three</MyComponent>
+	</div>
 	,document.getElementById("react-container"))
     </script>
     </body>
