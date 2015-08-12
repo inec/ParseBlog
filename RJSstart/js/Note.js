@@ -77,18 +77,21 @@ var Board = React.createClass({
     getInitialState:function(){
     	return{
     		notes:[
-    		'callbill',
-    		'liste',
-    		'sdffd'
+
     		]
     	}
     },
+    add:function(text) {
+    	console.log("add");
+    	var arr=this.state.notes;
+    	arr.push(text);
+    	this.setState({notes: arr});
+    },
     render: function() {
-        return (
-        	<div className="board">{this.state.notes.map(this.eachNote)}
-
+        return (<div className="board">{this.state.notes.map(this.eachNote)}
+<button className="btn btn-sm glyphicon glyphicon-plus btn-success" onChange={this.add.bind(null,"new note")} />
         	</div>
-        	)
+        	);
     }
 });
 
