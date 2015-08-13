@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <!-- jQuery, jQuery.ui -->
-    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- React -->
+<head>
+<title>Component Lifecycle</title>
     <script src="https://fb.me/react-0.13.3.min.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-
-    <!--Custom Styles -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <title>React Bulletin Board</title>
+    <style type="text/css">
+div{
+	background-color: :blue;	
+	height:200px;
+	width:200px;
+}
+    </style>
 </head>
 <body>
-    <div id="react-container"></div>
-    <script src="js/Note.js" type="text/jsx" ></script>
+<script type="text/jsx">
+    var Box = React.createClass( {
+    	componentWillMount:function(){
+alert("df");
+    	},
+        render: function() {
+            return <div></div>;
+        }
+    });
+
+    React.render(<Box />, document.body);
+
+</script>
 </body>
 </html>
