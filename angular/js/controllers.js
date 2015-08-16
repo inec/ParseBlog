@@ -7,3 +7,11 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
   });
 }]);
 
+artistControllers.controller('detailController', ['$scope', '$http','$routeParams',
+ function($scope, $http) {
+  $http.get('js/data.json').success(function(data) {
+    $scope.artists = data;
+    $scope.whichItem = $routeParams.itemId;
+  });
+}]);
+
