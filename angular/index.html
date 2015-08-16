@@ -2,15 +2,22 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
-  <title>Angular De</title>
+  <title>Angular Demo</title>
   <script src="lib/angular/angular.min.js"></script>
-    <script src="js/controllers.js"></script>
+  <script src="js/controllers.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div ng-controller = "MyController">
-  <h1>{{author.name}}</h1>
-  <p>{{author.title}}</p>
+
+<ul class="artistlist">
+<li class="artist cf" ng-repeat="item in artists">
+<img ng-src="images/{{item.shortname}}_tn.jpg" alt="photo of {{item.name}}">
+ <h2>{{item.name}}</h2>
+<h2>{{item.reknown}}</h2>
+  <li>
+</ul>
 </div>
 </body>
 </html>
