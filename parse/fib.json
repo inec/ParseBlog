@@ -1,10 +1,30 @@
 {
-  "rules": {
-    "users": {
-      "$user": {
-        ".read": "$user == auth.uid",
-        ".write": "$user == auth.uid"
-        }
+  "rules":{
+  "users": {
+    "$userid": {
+      ".write": "auth != null && 
+        (data.val() === null || 
+        (auth.provider === 'facebook' && auth.id === data.child('facebook/id').val() || 
+        (auth.provider === 'twitter' && auth.id === data.child('twitter/id').val())))"  }
+  },
+  "user-mappings": {
+    // Only allow users to read the user id mapping for their own account.
+    "facebook": {
+      "$fbuid": {
+        ".read": "auth != null && auth.provider === 'facebook' && auth.id === $fbuid",
+        ".write": "auth != null && 
+          (data.val() == null || 
+          root.child('users').child(data.val()).child('facebook-id').val() == auth.id)"
+      }
+    },
+    "twitter": {
+      "$twuid": {
+        ".read": "auth != null && auth.provider === 'twitter' && auth.id === $twuid",
+        ".write": "auth != null && 
+          (data.val() == null || 
+          root.child('users').child(data.val()).child('twitter-id').val() == auth.id)"
+      }
     }
   }
+}
 }
