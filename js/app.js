@@ -2,7 +2,7 @@ var baseURL = 'https://inec.firebaseIO.com/'
 var emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 /**
- * Setup firebase sync
+ * Setup firebase sync a
  */
 
 var Users = new Firebase(baseURL + 'users')
