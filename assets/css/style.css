@@ -1,0 +1,529 @@
+﻿
+/*=============================================================
+    Authour URL: www.designbootstrap.com
+
+    http://www.designbootstrap.com/
+
+    License: MIT
+
+    http://opensource.org/licenses/MIT
+
+    100% Free To use For Personal And Commercial Use.
+
+    IN EXCHANGE JUST TELL PEOPLE ABOUT THIS WEBSITE
+    Modified:AtsumaShu
+========================================================  */
+
+/*==============    GENERAL STYLES==================================*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto); /* GOOGLE FREE FONTS */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400);
+font-family: 'Roboto Slab', serif;
+@import url(http://fonts.googleapis.com/css?family=Tangerine);
+font-family: 'Tangerine', cursive;
+
+body {
+    font-family: 'Roboto', sans-serif;
+	font-family:'Open Sans';
+ 	 color:#008f7e;
+	 
+}
+html, body {
+
+overflow-x: hidden;
+  background-color: #f4fff4;
+}
+section {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.head-set {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pad-bottom {
+    padding-bottom: 60px;
+}
+
+.fontopens
+{
+font-family:"Open Sans";
+}
+.fontrobotos
+{
+font-family: "Roboto Slab";
+}
+.brcoloros
+{
+font-family:"Open Sans";
+color:#008f7e;
+font-weight:200;    	
+}
+
+.colornormal
+{
+color:#006872;   	
+}
+
+.brroboto{
+color:#006771;
+color:#008f7e;
+font-family: "Roboto Slab";
+margin-top:0;
+padding-left:15px;
+font-weight:300;
+font-size: 13vh;
+}
+.brlineheight{
+line-height: 1.7;
+       margin-top:0.5em;  
+
+}
+.brhr{
+    border-bottom:solid 1px;
+    border-color:#008f7e;
+        border-color:#00677e;
+			padding-top:0px;
+		margin-bottom:10px;
+}
+.brhrtop{
+    border-top:solid 1px;
+    border-color:#008f7e;
+        border-color:#00677e;
+			padding-top:0px;
+
+}
+.color1
+{
+color:#008f7e;
+}
+.color2
+{
+color:#006872;
+}
+.colorGray
+{
+color:#46525a;
+color:gray;
+}
+.colorDGray
+{
+color:#46525a;
+
+}
+.fsize2
+{
+font-size:20px;
+}
+.fsizeLocation
+{
+font-size:27px;
+}
+.fsize3
+{
+font-size:30px;
+}
+.fweight2
+{
+font-weight:200
+}
+.fweight3
+{
+font-weight:300
+}
+.fweight5
+{
+font-weight:500
+}
+.fweight7
+{
+font-weight:700
+}
+.fweight9
+{
+font-weight:900
+}
+.bgGreen
+{
+
+background-color:#006872;/*background-color: rgb(35, 133, 161);#f4fff4;*/
+}
+.bgGreen1
+{
+
+background-color:#008f7d;/*background-color: rgb(35, 133, 161);#f4fff4;*/
+}
+.bgColor2
+{
+
+background-color:#46525a;
+}
+.bgColor3
+{
+
+background-color:#b3d78b;
+
+}
+.bgColor4
+{
+background-color:#dfedec;
+}
+.bgGFont
+{
+color:white;
+}
+.borderWhite
+{
+ border-style: solid;
+    border-color: white;
+    border-width: 3px;
+}
+.carefont
+{
+padding-left:10px;
+padding-right:10px;
+}
+.carefont:hover {
+color:white;
+text-decoration:none;
+            opacity:0.75;
+        }
+/*================================
+    NAVBAR STYLES
+==================================*/
+.navbar-default {
+   /* background-color: rgb(35, 133, 161);*/
+   background-image:url('../img/wooden_bar.png');
+    border-color: transparent;
+	   
+    color: #fff;
+}
+.navbar
+{
+background-color:white;
+margin-bottom: 0px;
+}
+    .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover {
+		font-size: 14pt;
+		/*font-size: 13vh;   color: #fff;color: black;*/
+		color:#46525a;
+
+		font-family:"Open Sans";
+    }
+	.navbar-default .navbar-nav > .active > a:hover{
+	background-color: transparent;
+	text-decoration:underline;
+	}
+		.navbar-default .navbar-nav > .active > a{
+	background-color: transparent;
+
+	}
+
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-default .navbar-toggle{
+background-color:transparent;
+border-color:transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+background-color:transparent;
+background-color: rgba(192, 192, 192,0.20);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:#fff;
+	background-color:black;
+}
+/*
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+    padding-top:0px;
+	border-top: 20px solid #fff;
+}*/
+.arrow_box {
+	position: relative;
+	background: #fff;
+}
+.arrow_box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+/*================================
+    HOME SECTION STYLES
+==================================*/
+
+/*STYLE OF BACKGROUND IMAGE*/
+#home {
+    background: url(../img/home.png); /*url(../img/Big_Bird.png,url(../img/home.png)),*/
+
+	background-position: center top;/*, left top;*/
+	background-repeat:no-repeat; /*Full Witdth background image*/
+    padding: 0;
+	 border-style: solid;
+    border-color: white;
+    border-top-width: 10px;
+	padding-top: 50px;
+    -webkit-background-size: 100% 100%;/*auto,cover;*/
+     background-size:100% 100%;/*auto,background-size:100% 70%;width, height, contain;100% 70%cover;*/
+    -moz-background-size: cover;
+    /*min-height: 590px;*/
+}
+    /*STYLE FOR OVERLAY CLASS - WHICH IS ABOVE IMAGE WITH OPACITY/TRANSPARENCY 0.75*/
+    #home .overlay {
+        padding-top: 1px;
+         /*background-color: rgba(35, 133, 161,0.75);.75 opacity of the color so that background image is visible*/
+        min-height: 300px;
+        color: #fff;
+    }
+
+    #home h1 {
+        padding-top: 9px;
+        font-size: 39px;
+				
+        /*   font-size: 5vh; font-size: 7vh;    font-weight: 900;font-family: 'Browallia New';*/
+    }
+	
+	#home h2 {
+        padding-top: 1px;
+font-size: 25px;
+padding-left:0;
+				
+        /*  font-size: 3vh;  font-size: 7vh;    font-weight: 900;font-family: 'Browallia New';*/
+    }
+	
+	#home a, #home a:hover {
+        /*color: rgb(35, 133, 161);#A9A9A9 		color:	#090909;*/
+		font-weight:700;
+	
+        text-decoration: none;
+    }
+/*SMPLE CLASS TO ADJUST SECTION PADDING & HEIGHT*/
+
+/*CLASS TO FORMAT TEXT*/
+.p-cls {
+    padding-top: 10px;
+    padding-bottom: 40px;
+	font-size: 2.5vh;
+	color:#46525a;
+}
+
+/*======================================
+    PARALLAX LIKE / STATS SECTION STYLES
+=========================================*/
+
+.parallax-like {
+    background: url(../img/stats.jpg) no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+    .parallax-like .overlay {
+        min-height: 200px;
+        background: rgba(35, 133, 161,0.9);
+        font-size: 40px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+#services{
+background-color:white;
+font-family: "Roboto Slab";
+font-weight:300;
+font-color:#46525a;
+font-size:25px;
+}
+#services h4{
+   padding-top: 19px;
+font-weight:normal;
+font-size:18px;
+}
+#aboutus{
+background-color:white;
+font-family: "Roboto Slab";
+font-weight:300;
+font-color:#46525a;
+font-size:25px;
+}
+#aboutus h4{
+   padding-top: 19px;
+font-weight:normal;
+font-size:18px;
+}
+.bgWhite{
+background-color:white;
+
+}
+.services{
+background-color:white;
+font-family: "Roboto Slab";
+font-weight:300;
+font-color:#46525a;
+font-size:25px;
+}
+
+/*================================
+    PORTFOLIO / WORK SECTION STYLES
+==================================*/
+#works{
+background-color: #f4fff4;/*f4f4f4*/
+}
+.portfolio-item img:hover { /* POSTFOLIO IMAGE BIG ON HOVER */
+    cursor: pointer;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    z-index: 1;
+}
+
+/*================================
+    VIDEO SECTION STYLES
+==================================*/
+#video-sec {
+    color: #fff;
+    text-align: center;
+}
+
+    #video-sec .overlay {
+        background-color: rgba(0, 0, 0, 0.85);
+        min-height: 300px;
+        color: #fff;
+    }
+
+    #video-sec h1 {
+        padding-top: 80px;
+        font-size: 50px;
+
+        font-weight: 900;
+        padding-bottom: 30px;
+    }
+	
+	
+	
+	
+/*================================
+    CLIENTS SECTION STYLES
+==================================*/
+#clients {
+  
+
+    background-color:#f4f4f4;
+    padding-bottom:50px;
+    padding-top:50px;
+}
+    #clients img {
+        opacity:0.5;
+        cursor:pointer;
+    }
+        #clients img:hover {
+            opacity:1;
+        }
+		
+#aboutbrio {
+    background: url(../img/brio-blur_2.jpg) no-repeat center center; 
+    padding-bottom:50px;
+    padding-top:50px;
+	font-size:36px;
+	font-family: "Roboto Slab";
+	font-color:#008f7e;
+	
+}
+.aboutbrio {
+    background: url(../img/brio-blur_2.jpg) no-repeat center center; 
+    padding-bottom:50px;
+    padding-top:50px;
+	font-size:36px;
+	font-family: "Roboto Slab";
+	font-color:#008f7e;
+	
+}
+.meetbrio
+{
+/*font-family:"Open Sans";*/
+font-weight:300;
+	font-size:50px;
+color:white;
+}
+.opsix{
+   opacity:0.6;
+    filter: Alpha(opacity=60);
+}
+    #aboutbrio img {
+        opacity:0.5;
+        cursor:pointer;
+    }
+        #aboutbrio img:hover {
+            opacity:1;
+        }
+/*================================
+    FOOTER SECTION STYLES
+==================================*/
+
+footer {
+    padding: 20px;
+	padding-top: 30px;
+
+    font-size: 2.5vh;
+    font-weight:300; 
+    
+    background-color: rgb(35, 133, 161);
+	background-color: #f4fff4;
+	color:	#46525a;
+    /*color:rgb(35, 133, 161);*/
+
+}
+.footerline{
+height:60px;
+}
+
+    footer a, footer a:hover {
+        /*color: rgb(35, 133, 161);#A9A9A9*/
+			color:	#494949;
+				color:	#46525a;
+        text-decoration: none;
+    }
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
