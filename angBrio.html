@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="ychilu" />
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Brio Insurance</title>
+    <!-- BOOTSTRAP STYLE SHEET -->
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+ 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+
+    
+    </head>
+    
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+  <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/vivaldi-logo.png" alt="" class="visible-xs img-responsive" />
+					<img src="assets/img/logo_flag.png" alt="" class="hidden-xs img-responsive" />
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse  scroll-me">
+
+					<ul class="nav navbar-nav">
+				     <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li class="dropdown">
+              <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#home">Meet Brio</a></li>
+                <li><a href="#home">Careers</a></li>
+                <li><a href="#home">Giving Back</a></li>
+ <li><a href="#contact">Contact</a></li>
+              </ul>
+            </li>
+
+				
+
+					
+                    <li><a href="#about">PRODUCTS</a></li>
+                    <li><a href="#works">NEWS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+					    <li><a href="#contact">FAQ</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+
+      <!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+    
+    
+<!-- Footer Start-->
+
+
+<footer class="row">
+		
+		<div class="col-md-3 col-md-offset-1 text-left visible-xs">
+		<img src="assets/img/bird.gif" alt="" class="col-sm-offset-0" height="30">	© 2015 Brio Insurance
+		</div> <!-- End of duplicate logo-->
+
+	<div class="col-md-5 col-md-offset-1">
+	
+	<div class="row col-md-12 hidden-xs">&nbsp;</div>
+	<div class="footerline hidden-xs">&nbsp;</div>
+<div class="footerline hidden-xs">&nbsp;</div>
+
+	<div class="row brhr ">
+	</div>
+	
+
+<div>
+
+				<div class="col-md-6 col-xs-6 text-left">Stay Connected&nbsp;</div>
+				
+				<div class="col-md-6 col-xs-6 text-right">			
+			
+					<a href="https://www.facebook.com/brioinsurance"><i class=" fa fa-facebook fa-1x "></i></a>
+					<a href="https://twitter.com/SunovaCU">	<i class=" fa fa-twitter fa-1x "></i></a>
+					
+					<a href="#">	<i class="fa fa-envelope-o"></i></a>
+					
+					<a href="#">	<span class="glyphicon glyphicon-map-marker" ></span></a>
+					
+					<a href="#">	<i class="fa fa-tablet"></i></a>
+						<a href="https://instagram.com/sunovacu/" class="hidden-xs"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-linkedin-square"></i></a>
+				</div>
+				<div class="row brhr visible-xs"></div>
+</div>
+				
+
+				</div>
+       <!--start duplicated logo-->
+			<div class="col-md-3 col-md-offset-1 text-right hidden-xs">
+				<div class="footerline hidden-xs">&nbsp;</div>
+		<div class="row brhr">	<img src="assets/img/bird.gif" alt="" class=" col-xs-offset-4 col-sm-offset-0 pull-right" height="60"></div>
+
+	
+	
+			© 2015 <a href="http://www.BrioInsurance.ca/" target="_blank"> Brio Insurance</a>
+			</div>
+    </footer>
+    <!-- FOOTER SECTION END-->
+    <!-- REQUIRED SCRIPTS FILES -->
+    <!-- CORE JQUERY FILE -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- REQUIRED BOOTSTRAP SCRIPTS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+    <!-- BACKGROUND VIDEO PLUGIN  -->
+
+    <!-- SCROLLING SCRIPTS PLUGIN  -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- CUSTOM SCRIPTS   -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
