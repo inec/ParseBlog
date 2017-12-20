@@ -15,7 +15,7 @@
 <body>
   <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 <script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vuefire"></script>
+<script src="https://unpkg.com/vuefire"> </script>
 
 <div id="app">
   <input
@@ -29,7 +29,7 @@
         :value="todo.text"
         @input="updateTodoText(todo, $event.target.value)"
       >
-      <button @click="removeTodo(todo)">X</button>
+      <button @click="removeTodo(todo)">XX</button>
     </li>
   </ul>
 </div>
