@@ -53,7 +53,21 @@
         startingCity:'2',
         endingZip:'3',
         endingCity:'4'
-      }
+      },
+      watch:{
+         startingZip: function(){
+           this.startCity=''
+           if (this.startingZip.length==5){
+              //
+              this.lookupStaringZip()
+           }
+         }
+      },
+      methods: {
+        lookupStaringZip: _.debounce(function (){
+          this.startingCity="search..."
+        },500)
+      }//end
     })
   </script>
 </html>
