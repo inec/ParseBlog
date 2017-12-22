@@ -91,7 +91,14 @@
       },
       methods: {
         lookupStaringZip: _.debounce(function (){
-          this.startingCity="search..."
+          var app = this
+          app.startingCity="search..."
+          axios.get('https://ziptasticapi.com/'+app.startingZip)
+            .then(function(response){
+                app.startingCity= response.data.city + ', ' + response.data.state 
+            }).catch(function(error){
+               app.startingCity="invalide"
+            })
         },500)
       }//end
     })
