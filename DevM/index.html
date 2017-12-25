@@ -45,6 +45,10 @@
               <ul v-for="a in appointments">
                   <li>{{a.petOwner}}</li>
                 </ul>
+
+                <ul >
+                  <li><a v-bind:href="url">a</a></li>
+                </ul>
             </div><!-- end of .lead-form -->
             <script type="text/javascript"><!--
               google_ad_client = "pub-1541567996524033";
@@ -84,6 +88,7 @@
       data:{
         startingZip: '1',
         appointments: apts,
+        url:"http://google.com",
         startingCity:'2',
         endingZip:'3',
         endingCity:'4'
