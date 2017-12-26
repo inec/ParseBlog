@@ -128,6 +128,7 @@
         <p v-if="selectedInterests.length == 3">You  active: {{selectedInterests.join(', ')}}</p>
         <p v-else-if="selectedInterests.length > 0">You selected: {{selectedInterests.join(', ')}}</p>
         <p v-else>Please  selected: {{selectedInterests.join(', ')}}</p>
+        <div v-for="(value, key, index) in address"> {{index}}. {{value}}</div>
         <div v-for="i in 10">{{i}}</div>
 	</form>
 </div>
@@ -138,7 +139,13 @@
 	   data: {
 		   email: '',
            interests:['Running', 'Swimming','cycle'],
-		   selectedInterests: []
+		   selectedInterests: [],
+           address:{
+               st:'main st.',
+               zip:'94707',
+               name:'name'
+
+           }
 	   }
 	});
 </script>
