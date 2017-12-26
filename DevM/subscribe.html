@@ -119,13 +119,13 @@
 		<fieldset>
 			<legend>Interests</legend>
 			<div v-for="inte in interests">
-				<input type="checkbox" v-model="selectedInterests" value="inte">{{inte}}
+				<input type="checkbox" v-model="selectedInterests" :value="inte">{{inte}}
 			</div>
 
 		</fieldset>
 		<input type="submit" value="Subscribe">
 		<!--<p>You entered {{email}}.</p>-->
-		<p>You selected: {{selectedInterests.join(', ')}}</p>
+		<p v-show="selectedInterests.length > 0">You selected: {{selectedInterests.join(', ')}}</p>
 	</form>
 </div>
 
