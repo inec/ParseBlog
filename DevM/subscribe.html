@@ -115,7 +115,7 @@
 
 <div id="app">
 	<form method="post" action="/">
-		<label for="email">Email</label> <input type="email" :value="email" id="email">
+		<label for="email">Email</label> <input type="email" v-model="email" id="email">
 		<fieldset>
 			<legend>Interests</legend>
 			<div>
@@ -128,7 +128,8 @@
 				<input type="checkbox" value="Swimming"> Swimming
 			</div>
 		</fieldset>
-		<input type="submit" value="Subscribe">
+        <input type="submit" value="Subscribe">
+        <p>you enter {{email}}</p>
 	</form>
 </div>
 
