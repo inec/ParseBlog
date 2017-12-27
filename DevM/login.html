@@ -116,7 +116,7 @@
 <div id="app">    
         <form>
     <button v-if="!loggedIn" v-on:click="logIn('mke',$event)">Log in</button>     
-    <button v-else @click='logOut'>Log out</button>           
+    <button v-else @click.prevent='logOut'>Log out</button>           
     {{msg}}    
 </form>
 </div>
@@ -134,8 +134,7 @@
                this.loggedIn=true;
                this.msg='wle , '+ username;
            },
-           logOut:function(event){
-               event.preventDefault();
+           logOut:function(){
             this.loggedIn=false;
                this.msg='so long';
            }
