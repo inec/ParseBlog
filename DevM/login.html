@@ -114,19 +114,26 @@
 <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
 
 <div id="app">    
-	<button v-on:click="logIn">Log in</button>        
+    <button v-if="!loggedIn" v-on:click="logIn('mke')">Log in</button>     
+    <button v-else @click='logOut'>Log out</button>           
 	{{msg}}    
 </div>
 
 <script>
-    new Vue({
+  var vm=  new Vue({
        el: '#app',
        data: {
-           msg: ''           
+           msg: ''    ,
+           loggedIn: false       
        },
        methods:{
-           logIn:function(){
-               this.msg='wle';
+           logIn:function(username){
+               this.loggedIn=true;
+               this.msg='wle , '+ username;
+           },
+           logOut:function(){
+            this.loggedIn=false;
+               this.msg='so long';
            }
        }
     });
