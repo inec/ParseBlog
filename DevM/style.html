@@ -6,13 +6,23 @@
     <div :style="{border: 'solid 2px black','margin-botom':'30px',fontSize: myFontSize+'px'}">
         jsbo abd   jsbo abd   jsbo abd   jsbo abd   jsbo abd 
     </div>
+    
+    <div :style="fancyDiv" >
+        fancy dyv   jsbo abd   jsbo abd   jsbo abd   jsbo abd 
+    </div>
 </div>
 
 <script>
     new Vue({
        el: '#app',
        data: {
-           myFontSize:24
+           myFontSize:24,
+           fancyDiv:{
+               backgroundColor:'lightgrey',
+               borderRadius:'10px',
+               padding:'10px',
+               marginTop:'30px'
+           }
        }
     });
 </script>
