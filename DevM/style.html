@@ -10,6 +10,13 @@
     <div :style="fancyDiv" >
         fancy dyv   jsbo abd   jsbo abd   jsbo abd   jsbo abd 
     </div>
+
+    <div :style="[fancyDiv,fancierDiv]" 
+       @mouseover="fancierDiv.border='dashed 1px blue'"
+       @mouseout="fancierDiv.border='solid 1px black'"
+    >
+        fancy dyv   jsbo abd   jsbo abd   jsbo abd   jsbo abd 
+    </div>
 </div>
 
 <script>
@@ -22,6 +29,11 @@
                borderRadius:'10px',
                padding:'10px',
                marginTop:'30px'
+           },
+           fancierDiv:{
+               fontFaminly:'Arial,Helvetica',
+               border:'solid 1px black',
+               padding:'30px'
            }
        }
     });
