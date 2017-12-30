@@ -13,9 +13,14 @@
     });
 
     var LocalCom = {    template:' <div>\
-                                 local comp-{{ num }}\
+                                 local comp\
                                  <div>Num is : {{ num }}</div>\
-                                 </div>'
+                                 </div>',
+                        data: function(){
+                            return {
+                                num:99
+                            }
+                        }
                     };
 
     new Vue({
