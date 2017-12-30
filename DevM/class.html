@@ -5,6 +5,7 @@
 <div id="app">
     <div class="square" :class="{ blue: cold, red: hot}"></div>
 <div :class="cssClasses"></div>
+<div :class="[squareClass,bgColorClass]" ></div>
 </div>
 
 <script>
@@ -17,7 +18,9 @@
                square:true,
                'dashed-border':true,
                blue:false
-           }
+           },
+           squareClass:'square',
+           bgColorClass: 'red'
        }
     });
 </script>
