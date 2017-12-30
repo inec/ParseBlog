@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<div id="app">
+    {{firstName}} {{lastName}}
+    <div>
+        T in C:{{Math.round(5/9* (tFa-32))}}
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstName: 'Mike',
+            lastName: 'Sullivan',
+            tFa:0
+       }
+    });
+</script>
