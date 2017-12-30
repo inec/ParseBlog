@@ -132,6 +132,7 @@
         },
         created: function() {
             console.log('created');
+            this.question= "Created default quest ??? ";
         },
         beforeMount: function() {
             console.log('beforeMount');
@@ -154,9 +155,11 @@
         watch: {
             question: function(newValue) {
                 if (newValue.indexOf('products') > -1) {
+                 console.log("API　called");
                     this.response = "Sure, I can list the products for you.";
                     $.getJSON('https://hplussport.com/api/products')
                         .done(function(data) {
+                         console.log("API rec");
                             vm.products = data;
                         });
                 }
