@@ -19,12 +19,14 @@
        },
        computed:{
            tCe: function(){
+               console.log("L-22"+this.tFa);
            return Math.round(5/9* (this.tFa-32)) 
            }
 
        },
        methods:{
            tCeFunc: function(){
+            console.log("L-32 fun -"+this.tFa);
             return Math.round(5/9* (this.tFa-32)) 
            }
 

@@ -118,17 +118,32 @@
     <input type="text" v-model="question">
     {{response}}
     <ul>
-        <li v-for="product in products">{{product}}</li>
+        <li v-for="product in products">{{product.name}}</li>
     </ul>
 </div>
 
 <script>
-    vm = new Vue({
+   var vm = new Vue({
         el: '#app',
         data: {
             question: '',
             response: '',
-            product:[]
+            products:[]
+        },
+        watch:{
+            
+            question:function(newValue)  {
+                if (newValue.indexOf('product') > -1 ){
+                    this.response="sure";
+                    $.getJSON('https://hplussport.com/api/products')
+                    .done(function(data){
+                        vm.products=data;
+                    });
+                }else{
+                    this.response="Sorry";
+                    this.products=[];
+                }
+            }
         }
     });
 </script>
@@ -221,7 +236,7 @@
 <div class="credits section light-padding">
     <div class="credits-inner section-inner">
         <p class="fright">
-            <span> <a href="http://www.lynda.com">&copy; Lynda.com</a> &mdash; </span><a title="To the top" href="#" class="tothetop">Up &uarr;</a>
+            <span> <a href="http://www.sunovacu.ca">&copy; Sunova.com</a> &mdash; </span><a title="To the top" href="#" class="tothetop">Up &uarr;</a>
         </p>
         <div class="clear"></div>
     </div>
