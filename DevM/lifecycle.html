@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
-<!-- search for "Vue" to find the relevant code from the videos -->
-
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Virtual Agent &#8211; H+ Sport</title>
+    <title>Subscribe &#8211; H+ Sport</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/sow-social-media-buttons-atom.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/fontawesome.css" type="text/css" media="all">
@@ -123,32 +120,54 @@
 </div>
 
 <script>
-   var vm = new Vue({
+    var vm = new Vue({
         el: '#app',
         data: {
             question: '',
             response: '',
-            products:[]
+            products: []
         },
-        watch:{
-            
-            question:function(newValue)  {
-                if (newValue.indexOf('product') > -1 ){
-                    this.response="sure";
+        beforeCreate: function() {
+            console.log('beforeCreate');
+        },
+        created: function() {
+            console.log('created');
+        },
+        beforeMount: function() {
+            console.log('beforeMount');
+        },
+        mounted: function() {
+            console.log('mounted');
+        },
+        beforeUpdate: function() {
+            console.log('beforeUpdate');
+        },
+        updated: function() {
+            console.log('updated');
+        },
+        beforeDestroy: function() {
+            console.log('beforeDestroy');
+        },
+        destroyed: function() {
+            console.log('destroyed');
+        },
+        watch: {
+            question: function(newValue) {
+                if (newValue.indexOf('products') > -1) {
+                    this.response = "Sure, I can list the products for you.";
                     $.getJSON('https://hplussport.com/api/products')
-                    .done(function(data){
-                        vm.products=data;
-                    });
-                }else{
-                    this.response="Sorry";
-                    this.products=[];
+                        .done(function(data) {
+                            vm.products = data;
+                        });
+                }
+                else {
+                    this.response = "Sorry, I don't understand this question.";
+                    this.products = [];
                 }
             }
         }
     });
 </script>
-        
-        
         
         
         
@@ -169,7 +188,9 @@
             //--></script>
             <script type="text/javascript"
               src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
+            </script>        
+        
+        
         
         
         
@@ -251,7 +272,7 @@
 <div class="credits section light-padding">
     <div class="credits-inner section-inner">
         <p class="fright">
-            <span> <a href="http://www.sunovacu.ca">&copy; Sunova.com</a> &mdash; </span><a title="To the top" href="#" class="tothetop">Up &uarr;</a>
+            <span> <a href="http://www.lynda.com">&copy; Lynda.com</a> &mdash; </span><a title="To the top" href="#" class="tothetop">Up &uarr;</a>
         </p>
         <div class="clear"></div>
     </div>
