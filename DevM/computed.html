@@ -4,6 +4,7 @@
 <div id="app">
     {{firstName}} {{lastName}}
     <div>
+        <input type="text" v-model.number.lazy="tFa">
         T in C:{{Math.round(5/9* (tFa-32))}}
     </div>
 </div>
