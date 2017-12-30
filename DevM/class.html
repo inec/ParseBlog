@@ -5,7 +5,8 @@
 <div id="app">
     <div class="square" :class="{ blue: cold, red: hot}"></div>
 <div :class="cssClasses"></div>
-<div :class="[squareClass,bgColorClass]" ></div>
+<input type="text" v-model="bgColorClass">
+<div :class="[squareClass,bgColorClass,{'dashed-border':selected}]" ></div>
 </div>
 
 <script>
@@ -20,7 +21,8 @@
                blue:false
            },
            squareClass:'square',
-           bgColorClass: 'red'
+           bgColorClass: 'red',
+           selected:true
        }
     });
 </script>
