@@ -4,6 +4,7 @@
 
 <div id="app">
     <global-component></global-component>
+    <local-comp></local-comp>
 </div>
 
 <script>
@@ -11,11 +12,18 @@
         template:'<div>glo GG</div>'
     });
 
+    var LocalCom = {    template:' <div>\
+                                 local comp-{{ num }}\
+                                 <div>Num is : {{ num }}</div>\
+                                 </div>'
+                    };
+
     new Vue({
        el: '#app',
        data: {
            num: 42
-       }
+       },
+       components:{'local-comp':LocalCom }
     });
 </script>
 
