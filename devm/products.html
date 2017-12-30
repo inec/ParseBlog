@@ -114,13 +114,13 @@
 <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
 
 <div id="app">
-    <product-list :products="theProducts" title="Shop a tilte"></product-list>
+    <product-list :products="theProducts" the-title="Shop a tilte"></product-list>
 </div>
 
 <script>
     Vue.component('product-list',{
         template:'<div class="prodcut-list">\
-                 <h2>{{title}}</h2>\
+                 <h2>{{theTitle}}</h2>\
                  <ul>\
                   <li v-for="product in products">\
                   <img :src="product.image">\
@@ -129,7 +129,7 @@
                   </li>\
                  </ul>\
                  </div>',
-        props:['title','products']
+        props:['theTitle','products']
         }
     );
 
