@@ -114,22 +114,35 @@
 <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
 
 <div id="app">
-    <product-list title="Shop tilte"></product-list>
+    <product-list :products="theProducts" title="Shop a tilte"></product-list>
 </div>
 
 <script>
     Vue.component('product-list',{
         template:'<div class="prodcut-list">\
                  <h2>{{title}}</h2>\
+                 <ul>\
+                  <li v-for="product in products">\
+                  <img :src="product.image">\
+                   <p><strong>{{product.name}}</strong></p>\
+                   <p>{{product.description}}</p>\
+                  </li>\
+                 </ul>\
                  </div>',
-        props:['title']
+        props:['title','products']
         }
     );
 
     var vm = new Vue({
         el: '#app',
         data: {
-        
+            theProducts:[]
+        },
+        created:function(){
+            $.getJSON('https://hplussport.com/api/products')
+                    .done(function(data){
+                        vm.theProducts = data;
+                    });
         }
     });
 </script>
