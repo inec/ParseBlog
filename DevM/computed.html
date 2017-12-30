@@ -5,7 +5,7 @@
     {{firstName}} {{lastName}}
     <div>
         <input type="text" v-model.number.lazy="tFa">
-        T in C:{{Math.round(5/9* (tFa-32))}}
+        T in C:{{ tCe}}
     </div>
 </div>
 
@@ -16,6 +16,12 @@
             firstName: 'Mike',
             lastName: 'Sullivan',
             tFa:0
+       },
+       computed:{
+           tCe: function(){
+           return Math.round(5/9* (this.tFa-32)) 
+           }
+
        }
     });
 </script>
