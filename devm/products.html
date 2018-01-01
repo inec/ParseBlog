@@ -133,7 +133,14 @@
     });
 
     Vue.component('product-list-item',{
-        template:'<div></div>'
+        template:
+            ' <li>\
+                    <img :src="product.image">\
+                            <p><strong>{{product.name}}</strong></p>\
+                            <p>{{product.description}}</p>\
+                        </li>' ,
+        props:['product']
+         
     }
 
 
