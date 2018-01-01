@@ -122,11 +122,8 @@
         template: '<div class="product-list">\
                     <h2>{{theTitle}}</h2>\
                     <ul>\
-                        <li v-for="product in products">\
-                            <img :src="product.image">\
-                            <p><strong>{{product.name}}</strong></p>\
-                            <p>{{product.description}}</p>\
-                        </li>\
+                     <product-list-item v-for="product in products" :product="product">\
+                     </product-list-item>\
                     </ul>\
                 </div>',
         props: ['theTitle', 'products']
