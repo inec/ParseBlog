@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-
-<!-- search for "Vue" to find the relevant code from the videos -->
-
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -114,51 +111,27 @@
 <script type="text/javascript" src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
 
 <div id="app">
-    <product-list the-title="Shop our award-winning product line" :products="theProducts">
-        <p slot="top">what ppp</p>
-        <em slot="bottom">em emm</em>
-    </product-list>
-        
-    <product-list-flex :products="theProducts" the-title="custom layout" >
-        <template scope="props">
-            <strong> {{props.product.name}} </strong>  {{props.product.description}}
-        </template> 
-    </product-list-flex> 
+    <product-list :products="theProducts" title="Shop our award-winning product line"></product-list>
 </div>
 
 <script>
     Vue.component('product-list', {
         template: '<div class="product-list">\
-                        <h2>{{theTitle}}</h2>\
-                        <slot name="top">watch this space for msg!</slot>\
+                        <h2>{{title}}</h2>\
                         <ul>\
                             <product-list-item v-for="product in products" :product="product">\
                             </product-list-item>\
-                           <li> <slot name="bottom"></slot></li>\
                         </ul>\
                     </div>',
-        props: ['theTitle', 'products']
+        props: ['products', 'title']
     });
-
-    Vue.component('product-list-flex', {
-        template: '<div class="product-list">\
-                        <h2>{{theTitle}}</h2>\
-                        <ul>\
-                          <li v-for="product in products" >\
-                                <slot :product="product" ></slot>\
-                           </li>\
-                        </ul>\
-                    </div>' ,
-        props: ['theTitle', 'products']
-    });
-
     
     Vue.component('product-list-item', {
        template: '<li>\
                     <img :src="product.image">\
                     <p><strong>{{product.name}}</strong></p>\
                     <p>{{product.description}}</p>\
-                  </li>',
+                </li>',
         props: ['product']
     });
 
@@ -168,10 +141,10 @@
             theProducts: []
         },
         created: function() {
-            $.getJSON('https://hplussport.com/api/products')
-                .done(function(data) {
-                   vm.theProducts = data; 
-                });
+            $.getJSON('https://hplussport.com/api/products.php?function=products')
+            .done(function(data) {
+                vm.theProducts = data;    
+            });
         }
     });
 </script>
@@ -194,8 +167,7 @@
     .product-list img.small {
         width: 100px;
     }
-</style>
-        
+</style>         
         
         
         
