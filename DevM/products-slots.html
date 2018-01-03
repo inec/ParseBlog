@@ -118,6 +118,10 @@
         <p slot="top">what ppp</p>
         <em slot="bottom">em emm</em>
     </product-list>
+
+    <product-list-flex :products="theProducts" the-title="custom layout" >
+
+    </product-list-flex> 
 </div>
 
 <script>
@@ -128,11 +132,24 @@
                         <ul>\
                             <product-list-item v-for="product in products" :product="product">\
                             </product-list-item>\
-                           <li> <slot name="bot"></slot><\li>\
+                           <li> <slot name="bottom"></slot></li>\
                         </ul>\
                     </div>',
         props: ['theTitle', 'products']
     });
+
+    Vue.component('product-list-flex', {
+        template: '<div class="product-list">\
+                        <h2>{{theTitle}}</h2>\
+                        <ul>\
+                          <li v-for="product in products" >\
+                                <slot :product="product" ></slot>\
+                           </li>\
+                        </ul>\
+                    </div>' ,
+        props: ['theTitle', 'products']
+    });
+
     
     Vue.component('product-list-item', {
        template: '<li>\
