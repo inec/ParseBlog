@@ -132,6 +132,31 @@
 </div>
 
 <script>
+    // Vue.component('product-list', {
+    //     template: '<div class="product-list">\
+    //                     <h2>{{title}}</h2>\
+    //                     <ul>\
+    //                         <product-list-item v-for="(product,i) in products" :remove-method="remove.bind(this,i)" :product="product" :key="product.id">\
+    //                         </product-list-item>\
+    //                     </ul>\
+    //                 </div>',
+    //     props: ['products', 'title'],
+    //     methods:{
+    //         remove:function(i){
+    //             this.products.splice(i,1);
+    //         }
+    //     }
+    // });
+    
+    // Vue.component('product-list-item', {
+    //    template: '<li>\
+    //                 <img :src="product.image">\
+    //                 <p><strong>{{product.name}}</strong></p>\
+    //                 <p>{{product.description}}<a @click="removeMethod">Hide this item</a></p>\
+    //             </li>',
+    //     props: ['product','removeMethod']
+    // });
+
     Vue.component('product-list', {
         template: '<div class="product-list">\
                         <h2>{{title}}</h2>\
@@ -154,7 +179,12 @@
                     <p><strong>{{product.name}}</strong></p>\
                     <p>{{product.description}}<a @click="removeMethod">Hide this item</a></p>\
                 </li>',
-        props: ['product','removeMethod']
+        props: ['product'],
+        methods: {
+            requestRemoval:function(){
+                this.emit$('remove');
+            }
+        }
     });
 
     var vm = new Vue({
