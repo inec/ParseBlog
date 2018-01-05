@@ -135,9 +135,9 @@
        template: '<li>\
                     <img :src="product.image">\
                     <p><strong>{{product.name}}</strong></p>\
-                    <p>{{product.description}}<a>Hide this item</a></p>\
+                    <p>{{product.description}}<a @click="removeMethod">Hide this item</a></p>\
                 </li>',
-        props: ['product']
+        props: ['product','removeMethod']
     });
 
     var vm = new Vue({
