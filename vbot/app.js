@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       const speech = serverResponse["result"]["fulfillment"]["speech"];
       var msg = new SpeechSynthesisUtterance(speech);
       msg.voice = window.speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
-console.log("L-127"+ msg.voice); 
+//console.log("L-127"+ msg.voice); 
 
       addBotItem(speech);
       ga('send', 'event', 'Message', 'add', 'bot');
@@ -221,10 +221,20 @@ window.speechSynthesis.speak(msg);
     evt = evt || window.event;
     var isEscape = false;
     if ("key" in evt) {
+      if (evt.key === 'Enter'){
+
+        var qtext=document.querySelector("#texta")
+        console.log("L-225 Enter ", qtext.value);
+        startText(qtext.value);
+        qtext.value="";
+
+      }
         isEscape = (evt.key == "Escape" || evt.key == "Esc");
-    } else {
+     
+    }else {
         isEscape = (evt.keyCode == 27);
     }
+
     if (isEscape) {
         recognition.abort();
     }
