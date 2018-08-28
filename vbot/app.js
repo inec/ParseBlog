@@ -168,7 +168,7 @@ window.speechSynthesis.speak(msg);
       //var speech="I'm a boy";
       var msg = new SpeechSynthesisUtterance(speech);
       msg.voice = window.speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
-console.log("L-127"+ msg.voice); 
+//console.log("L-171"+ msg.voice); 
 
       addBotItem(speech);
 
