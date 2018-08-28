@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-<!--   <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-1541567996524033",
-      enable_page_level_ads: true
-    });
-  </script> -->
+
+
+<!--   -->
 
   <body>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1541567996524033",
+          enable_page_level_ads: true
+     });
+</script>
     <div id="app">
       <div class="container">
         <div class="row">
@@ -29,11 +31,11 @@
               <hr />
               <div class="row">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Starting Zip" v-model="startingZip">
+                  <input type="text" class="form-control" placeholder="Starting Zip" name="start" v-model="startingZip">
                   <span class="city-span" >{{startingCity}}</span>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Ending Zip" v-model="endingZip">
+                  <input type="text" class="form-control" placeholder="Ending Zip" name="end" v-model="endingZip">
                   <span class="city-span">{{endingCity}}</span>
                 </div>
               </div>
@@ -52,7 +54,11 @@
                 </ul>
                 <a href="products-events.html">products-events.html</a>
             </div><!-- end of .lead-form -->
-            <script type="text/javascript"><!--
+           
+        
+            <!-- <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>   --><!--<script type="text/javascript">
               google_ad_client = "pub-1541567996524033";
               google_ad_width = 200;
               google_ad_height = 200;
@@ -64,10 +70,11 @@
               google_color_link = "0000FF";
               google_color_text = "FFFFFF";
               google_color_url = "008000";
-              //--></script>
+              //
+</script>
               <script type="text/javascript"
                 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-              </script>
+              </script> -->
           </div> <!-- end of .col-md-6.col-md-offset-3 -->
 
         </div> <!-- end of .row -->
